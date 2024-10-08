@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Roboto, Mono"', ...defaultTheme.fontFamily.sans],
-        sans: ['"Roboto, Mono"', ...defaultTheme.fontFamily.sans],
+        sans: ['"Roboto Mono"', ...defaultTheme.fontFamily.sans], // Single entry for sans with correct font family name
+      },
       colors: {
         primary: {
           DEFAULT: '#4F46E5', 
@@ -20,5 +20,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
 }

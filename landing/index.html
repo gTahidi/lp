@@ -1,411 +1,210 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head title="www.ujaotech.com - home">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="assets/js/tailwind.js"></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="./output.css" rel="stylesheet">
-  </head>
-  <body class ="font-mono">
-    <header id="section-header-gi320s1ythnm6mo" class="py-10 px-6 w-full bg-slate-50" class="font-mono">
-      <div class="mx-auto max-w-7xl lg:px-4">
-        <nav class="relative z-30 flex justify-between">
-          <div class="flex items-center md:gap-x-12">
-            <a aria-label="Home" href="/">
-              <div class="text-slate-900 flex flex-row items-center space-x-2 text-xl font-semibold">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-9 stroke-indigo-600">
-                  <path d="M2 12c0-2.8 2.2-5 5-5s5 2.2 5 5 2.2 5 5 5 5-2.2 5-5"></path>
-                  
-                  <path d="M7 20.7a1 1 0 115-8.7 1 1 0 105-8.6"></path>
-                  <path d="M7 3.3a1 1 0 115 8.6 1 1 0 105 8.6"></path>
-                  <circle cx="12" cy="12" r="10"></circle>
-                </svg>
-                <span class="text-slate-900">
-                  www.ujaotech.com
-                </span>
-              </div>
-            </a>
-            <div class="hidden md:flex md:gap-x-6">
-              <a class="inline-block text-sm text-slate-900/80" href="/">
-                Home
-              </a>
-            </div>
-          </div>
-          <div class="flex items-center gap-x-5 md:gap-x-8">
-            <div class="hidden md:block">
-              <a class="inline-block text-sm text-slate-900/80" href="#"></a>
-            </div>
-          </div>
-        </nav>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujaotech - Transform Your Business with Custom Software</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FFA07A; /* Light Salmon */
+            --text-color: #333;
+            --background-color: #FFF;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            background-color: var(--background-color);
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 18px;
+            margin-left: 30px;
+        }
+        .logo-placeholder {
+            width: 150px;
+            height: 50px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #999;
+        }
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 4px;
+        }
+        .cta-button:hover {
+            background-color: #FF8C61;
+        }
+        .services, .projects {
+            padding: 80px 0;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        .card {
+            background-color: var(--background-color);
+            border: 2px solid var(--primary-color);
+            padding: 30px;
+            transition: transform 0.3s;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+        .contact {
+            text-align: center;
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        footer {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo-placeholder">Your Logo</div>
+                <div>
+                    <a href="#services">Services</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact" class="cta-button">Let's Talk</a>
+                </div>
+            </nav>
+        </div>
     </header>
-    <main class="font-mono">
-      <section id="section-hero-t4azopexrs8oyak" class="pt-20 lg:pt-32  bg-slate-50">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h1 class="mx-auto text-center max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 sm:text-7xl">
-            Automate
-            <span class="relative whitespace-nowrap text-indigo-600">
-              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" viewBox="0 0 418 42" class="absolute left-0 top-2/3 h-[0.58em] w-full fill-indigo-600/70" preserveAspectRatio="none">
-                <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
-              </svg>
-              <span class="relative">
-                Business Processes
-              </span>
-            </span>
-            and plug into your customers Data
-          </h1>
-          <p class="mx-auto text-center mt-6 max-w-2xl text-lg tracking-tight text-slate-900/80">
-            Know your clients better.
-          </p>
-          <div class="py-10 flex justify-center gap-x-6">
-            <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-indigo-600 text-slate-900 hover:opacity-80 " href="">
-              Get Started
-            </a>
-          </div>
-        </div>
-      </section>
-      <section id="section-how_it_works-nkprah6wgl7ghh6" class="py-24 relative bg-slate-50">
-        <div class="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
-          <div class="w-full flex-col justify-start items-center lg:gap-12 gap-10 inline-flex">
-            <div class="w-full flex-col justify-start items-center gap-3 flex">
-              <h2 class="w-full text-center text-slate-900 text-4xl font-bold font-manrope leading-normal">
-                How we Work
-              </h2>
-              <p class="w-full text-center text-slate-900/80 text-base font-normal leading-relaxed">
-                It&#39;s a simple 3-step process
-              </p>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Transform Your Business with Custom Software</h1>
+                <p>We build powerful, tailored solutions that drive growth and efficiency for enterprises</p>
+                <a href="#contact" class="cta-button">Discuss Your Project</a>
             </div>
-            <div class="w-full justify-start items-center gap-4 flex md:flex-row flex-col">
-              <div class="grow shrink basis-0 flex-col justify-start items-center gap-2.5 inline-flex">
-                <div class="self-stretch flex-col justify-start items-center gap-0.5 flex">
-                  <h3 class="self-stretch text-center text-indigo-600 text-4xl font-extrabold font-manrope leading-normal">
-                    1
-                  </h3>
-                  <h4 class="self-stretch text-center text-slate-900 text-xl font-semibold leading-8">
-                    Planning
-                  </h4>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Custom Software Development</h3>
+                        <p>Tailor-made solutions designed to address your unique business challenges</p>
+                    </div>
+                    <div class="card">
+                        <h3>Business Process Automation</h3>
+                        <p>Streamline your operations with intelligent automation solutions</p>
+                    </div>
+                    <div class="card">
+                        <h3>Legacy System Modernization</h3>
+                        <p>Upgrade and transform your existing systems for improved performance</p>
+                    </div>
+                    <div class="card">
+                        <h3>AI & Machine Learning Integration</h3>
+                        <p>Leverage cutting-edge AI technologies to gain competitive advantages</p>
+                    </div>
                 </div>
-                <p class="self-stretch text-center text-slate-900/80 text-base font-normal leading-relaxed">
-                  We plan with you on your software project
-                </p>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="md:flex hidden text-indigo-600">
-                <path d="m6 17 5-5-5-5"></path>
-                <path d="m13 17 5-5-5-5"></path>
-              </svg>
-              <div class="grow shrink basis-0 flex-col justify-start items-center gap-2.5 inline-flex">
-                <div class="self-stretch flex-col justify-start items-center gap-0.5 flex">
-                  <h3 class="self-stretch text-center text-indigo-600 text-4xl font-extrabold font-manrope leading-normal">
-                    2
-                  </h3>
-                  <h4 class="self-stretch text-center text-slate-900 text-xl font-semibold leading-8">
-                    Negotiate
-                  </h4>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Our Success Stories</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Diaspora Directory</h3>
+                        <p>Connecting 1.5K+ global users</p>
+                        <a href="https://thediasporadirectory.com/" target="_blank" rel="noopener noreferrer" class="cta-button">View Project</a>
+                    </div>
+                    <div class="card">
+                        <h3>Wander Lust AI</h3>
+                        <p>Empowering 1M+ travelers</p>
+                        <a href="https://www.wanderwiseai.com/" target="_blank" rel="noopener noreferrer" class="cta-button">View Project</a>
+                    </div>
+                    <div class="card">
+                        <h3>gTahidi AI</h3>
+                        <p>Revolutionizing education for 500+ users</p>
+                        <a href="https://gtahidi.ai" target="_blank" rel="noopener noreferrer" class="cta-button">View Project</a>
+                    </div>
+                    <div class="card">
+                        <h3>Enterprise Solutions</h3>
+                        <p>300+ features implemented</p>
+                        <a href="#contact" class="cta-button">Learn More</a>
+                    </div>
                 </div>
-                <p class="self-stretch text-center text-slate-900/80 text-base font-normal leading-relaxed">
-                  We agree on a price and Timeline
-                </p>
-              </div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="md:flex hidden text-indigo-600">
-                <path d="m6 17 5-5-5-5"></path>
-                <path d="m13 17 5-5-5-5"></path>
-              </svg>
-              <div class="grow shrink basis-0 flex-col justify-start items-center gap-2.5 inline-flex">
-                <div class="self-stretch flex-col justify-start items-center gap-0.5 flex">
-                  <h3 class="self-stretch text-center text-indigo-600 text-4xl font-extrabold font-manrope leading-normal">
-                    3
-                  </h3>
-                  <h4 class="self-stretch text-center text-slate-900 text-xl font-semibold leading-8">
-                    Implement
-                  </h4>
-                </div>
-                <p class="self-stretch text-center text-slate-900/80 text-base font-normal leading-relaxed">
-                  We deliver your project in a tidy package complete with support and maintenance
-                </p>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="section-cta_banner-p8vaykocm4x31g3" class="relative overflow-hidden bg-indigo-600 py-32">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative">
-          <div class="mx-auto max-w-lg text-center">
-            <h2 class="font-display text-3xl tracking-tight text-slate-50 sm:text-4xl">
-              Ready to Get Started?
-            </h2>
-            <p class="mt-4 text-lg tracking-tight text-slate-50">
-              We like building things, It is second nature to us
-            </p>
-            <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-slate-50 hover:opacity-90 active:bg-slate-900 active:text-slate-900 focus-visible:outline-slate-900 mt-10" href="">
-              Talk to us today
-            </a>
-          </div>
-        </div>
-      </section>
-      <section id="section-feature-8iskzmp8mfecao4" class="py-24 bg-slate-50">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="mb-14 text-center">
-            <h2 class="text-2xl md:text-3xl lg:text-4xl text-center font-display tracking-tight text-slate-900 py-5">
-              We help enterprises automate Business Processes using software
-            </h2>
-            <p class="text-lg font-normal text-slate-900/70 max-w-md md:max-w-xl mx-auto">
-              We help you move from your legacy codebase, application, website...... To newer more powerful but simpler software
-            </p>
-          </div>
-          <div class="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
-            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-indigo-600/10 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600/20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-7 stroke-indigo-600">
-                  <path d="M13 17V9"></path>
-                  <path d="M18 17V5"></path>
-                  <path d="M3 3v16a2 2 0 002 2h16"></path>
-                  <path d="M8 17v-3"></path>
-                </svg>
-              </div>
-              <h4 class="text-lg font-medium text-slate-900 mb-3 capitalize">
-                Flexible
-              </h4>
-              <p class="text-sm font-normal text-slate-900/50">
-                You can export clean, readable code at any time. You have full control over hosting and you can make manual changes if needed.
-              </p>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Let's Discuss Your Project</h2>
+                <a href="YOUR_FORM_LINK_HERE" class="cta-button">Contact Us</a>
             </div>
-            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-indigo-600/10 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600/20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-7 stroke-indigo-600">
-                  <rect width="7" height="7" x="3" y="3" rx="1"></rect>
-                  <rect width="7" height="7" x="14" y="3" rx="1"></rect>
-                  <rect width="7" height="7" x="14" y="14" rx="1"></rect>
-                  <rect width="7" height="7" x="3" y="14" rx="1"></rect>
-                </svg>
-              </div>
-              <h4 class="text-lg font-medium text-slate-900 mb-3 capitalize">
-                Minimalistic
-              </h4>
-              <p class="text-sm font-normal text-slate-900/50">
-                Our Work is on a needs based basis. Your need it, we build it
-              </p>
-            </div>
-            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-indigo-600/10 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600/20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-7 stroke-indigo-600">
-                  <rect width="8" height="8" x="3" y="3" rx="2"></rect>
-                  <path d="M7 11v4a2 2 0 002 2h4"></path>
-                  <rect width="8" height="8" x="13" y="13" rx="2"></rect>
-                </svg>
-              </div>
-              <h4 class="text-lg font-medium text-slate-900 mb-3 capitalize">
-                Performant
-              </h4>
-              <p class="text-sm font-normal text-slate-900/50">
-                We use simple architecture to compund and solve complex problems.
-              </p>
-            </div>
-            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-indigo-600/10 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600/20">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-7 stroke-indigo-600">
-                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91A2.18 2.18.0 004.5 16.5z"></path>
-                  <path d="m12 15-3-3a22 22 0 012-3.95A12.88 12.88.0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35.0 01-4 2z"></path>
-                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62.0-5 0-5"></path>
-                </svg>
-              </div>
-              <h4 class="text-lg font-medium text-slate-900 mb-3 capitalize">
-                Always improving
-              </h4>
-              <p class="text-sm font-normal text-slate-900/50">
-                We constantly maintain and evolve your software, on a needs basis 😉
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="section-stats-99tcw5ys0ynqu29" class="py-20 bg-slate-50">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="rounded-2xl py-10 px-5 xl:py-16 xl:px-10 bg-slate-900/5 flex flex-col items-center gap-16">
-            <div class="w-full text-center">
-              <h2 class="font-manrope text-4xl font-bold text-slate-900 mb-4">
-                Our Projects
-              </h2>
-              <p class="text-sm text-slate-900/60 leading-6">
-                We maintain several Software projects
-              </p>
-            </div>
-            <div class="flex flex-col flex-1 gap-10 justify-center lg:flex-row lg:justify-between">
-              <div class="w-full mx-auto lg:w-1/4 bg-indigo-600/10 p-12 rounded-xl">
-                <div class="font-manrope font-semibold text-5xl text-indigo-600 mb-3 text-center">
-                  1.5K+
-                </div>
-                <span class="text-lg text-slate-900 text-center block">
-                  Diaspora Directory
-                </span>
-              </div>
-              <div class="w-full mx-auto lg:w-1/4 bg-indigo-600/10 p-12 rounded-xl">
-                <div class="font-manrope font-semibold text-5xl text-indigo-600 mb-3 text-center">
-                  1M+
-                </div>
-                <span class="text-lg text-slate-900 text-center block">
-                  Wander Lust AI
-                </span>
-              </div>
-              <div class="w-full mx-auto lg:w-1/4 bg-indigo-600/10 p-12 rounded-xl">
-                <div class="font-manrope font-semibold text-5xl text-indigo-600 mb-3 text-center">
-                  500+
-                </div>
-                <span class="text-lg text-slate-900 text-center block">
-                  gTahidi AI
-                </span>
-              </div>
-              <div class="w-full mx-auto lg:w-1/4 bg-indigo-600/10 p-12 rounded-xl">
-                <div class="font-manrope font-semibold text-5xl text-indigo-600 mb-3 text-center">
-                  300+
-                </div>
-                <span class="text-lg text-slate-900 text-center block">
-                  Features Implemented
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="section-team-yr6ae7js3m1r26t" class="py-24 w-full bg-slate-50">
-        <div class="mx-auto  max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="mb-12">
-            <h2 class="font-display text-center text-3xl tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
-              Made with ❤️by
-            </h2>
-          </div>
-          <div class="flex flex-row items-center justify-evenly space-x-4 max-w-xl mx-auto md:max-w-3xl lg:max-w-full">
-            <div class="block group md:col-span-2 lg:col-span-1">
-              <div class="relative mb-6">
-                <img src="api/files/team_members/wrdicmydeh8tbmq/Profile.jpg" alt="Daniel Omusula image" class="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"/>
-              </div>
-              <h4 class="text-xl font-semibold text-slate-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
-                Daniel Omusula
-              </h4>
-              <span class="text-slate-900 text-center block transition-all duration-500 group-hover:text-slate-900">
-                Founding Engineer
-              </span>
-            </div>
-            <div class="block group md:col-span-2 lg:col-span-1">
-              <div class="relative mb-6">
-                <img src="https://placehold.co/200x200" alt="Brian Okechi image" class="w-40 h-40 rounded-full mx-auto transition-all duration-500 object-cover border border-solid border-transparent group-hover:border-indigo-600"/>
-              </div>
-              <h4 class="text-xl font-semibold text-slate-900 mb-2 capitalize text-center transition-all duration-500 group-hover:text-indigo-600">
-                Brian Okechi
-              </h4>
-              <span class="text-slate-900 text-center block transition-all duration-500 group-hover:text-slate-900">
-                Founding Engineer
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
-    <footer id="section-footer-0he568uwhahr50f" class="w-full py-14 bg-slate-50">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl mx-auto">
-          <a class="flex justify-center" href="#">
-            <div class="text-slate-900 flex flex-row items-center space-x-2 text-xl font-semibold">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-9 stroke-indigo-600">
-                <path d="M2 12c0-2.8 2.2-5 5-5s5 2.2 5 5 2.2 5 5 5 5-2.2 5-5"></path>
-                <path d="M7 20.7a1 1 0 115-8.7 1 1 0 105-8.6"></path>
-                <path d="M7 3.3a1 1 0 115 8.6 1 1 0 105 8.6"></path>
-                <circle cx="12" cy="12" r="10"></circle>
-              </svg>
-              <span class="text-slate-900">
-                www.ujaotech.com
-              </span>
-            </div>
-          </a>
-          <p class="text-md my-4 max-w-md text-center mx-auto text-slate-900/80">
-            s
-          </p>
-          <ul class="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 border-b border-gray-200">
-            <li>
-              <div class="text-slate-900 hover:opacity-80">
-                <p class="font-semibold text-md">
-                  Resources
-                </p>
-                <div class="flex flex-col items-start space-y-4">
-                  <a class="text-sm text-slate-900/50" href="#">
-                    Blog
-                  </a>
-                  <a class="text-sm text-slate-900/50" href=""></a>
-                  <a class="text-sm text-slate-900/50" href=""></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="text-slate-900 hover:opacity-80">
-                <p class="font-semibold text-md">
-                  Legal
-                </p>
-                <div class="flex flex-col items-start space-y-4">
-                  <a class="text-sm text-slate-900/50" href="#">
-                    Terms of Service
-                  </a>
-                  <a class="text-sm text-slate-900/50" href="#">
-                    Privacy Policy
-                  </a>
-                  <a class="text-sm text-slate-900/50" href=""></a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="text-slate-900 hover:opacity-80">
-                <p class="font-semibold text-md">
-                  Support
-                </p>
-                <div class="flex flex-col items-start space-y-4">
-                  <a class="text-sm text-slate-900/50" href="">
-                    Contact Sales
-                  </a>
-                  <a class="text-sm text-slate-900/50" href="#">
-                    Contact Support
-                  </a>
-                  <a class="text-sm text-slate-900/50" href=""></a>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <div class="flex space-x-10 justify-center items-center mb-7">
-            <a class="hover:opacity-80" href="https://www.instagram.com/yourcompany" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-6 stroke-slate-900">
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
-                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-              </svg>
-            </a>
-            <a class="hover:opacity-80" href="https://www.youtube.com/channel/yourcompany" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-6 stroke-slate-900">
-                <path d="M2.5 17a24.12 24.12.0 010-10 2 2 0 011.4-1.4 49.56 49.56.0 0116.2.0A2 2 0 0121.5 7a24.12 24.12.0 010 10 2 2 0 01-1.4 1.4 49.55 49.55.0 01-16.2.0A2 2 0 012.5 17"></path>
-                <path d="m10 15 5-3-5-3z"></path>
-              </svg>
-            </a>
-            <a class="hover:opacity-80" href="https://www.facebook.com/yourcompany" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-6 stroke-slate-900">
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a class="hover:opacity-80" href="https://www.linkedin.com/company/yourcompany" target="_blank">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-glucide="icon" class="size-6 stroke-slate-900">
-                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"></path>
-                <rect width="4" height="12" x="2" y="9"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-            </a>
-            <a class="hover:opacity-80" href="https://x.com/yourcompany" target="_blank">
-              <svg class="size-5" viewBox="0 0 1200 1227" class="stroke-slate-900" xmlns="http://www.w3.org/2000/svg">
-                <path class="fill-slate-900" d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"></path>
-              </svg>
-            </a>
-          </div>
-          <span class="text-lg text-gray-500 text-center block">
-            © 2024 Ujaotech.com
-          </span>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Ujaotech. All rights reserved.</p>
         </div>
-      </div>
     </footer>
-  </body>
+</body>
 </html>
