@@ -90,11 +90,16 @@
         }
         .card {
             background-color: var(--background-color);
-            border: 2px solid var(--primary-color);
             padding: 30px;
             transition: transform 0.3s;
             cursor: pointer;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .services .card {
+            border: 2px solid #000;
+        }
+        .projects .card {
+            border: 2px solid var(--primary-color);
         }
         .card:hover {
             transform: translateY(-10px);
@@ -108,13 +113,43 @@
             padding: 80px 0;
             background-color: #f9f9f9;
         }
+        .founders {
+            text-align: center;
+            padding: 80px 0;
+            background-color: #f0f0f0;
+        }
+        .founder-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            justify-items: center;
+        }
+        .founder-card {
+            text-align: center;
+        }
+        .founder-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
         footer {
             background-color: var(--background-color);
             color: var(--text-color);
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 0;
             margin-top: 40px;
             border-top: 1px solid #eee;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .footer-section {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -147,19 +182,19 @@
                 <div class="grid">
                     <div class="card">
                         <h3>Custom Software Development</h3>
-                        <p>Tailor-made solutions designed to address your unique business challenges</p>
+                        <p>We build Software that works for you, and your business needs</p>
                     </div>
                     <div class="card">
-                        <h3>Business Process Automation</h3>
-                        <p>Streamline your operations with intelligent automation solutions</p>
+                        <h3> Business Process Automation </h3>
+                        <p> We focus on improving business process efficiency using software </p>
                     </div>
                     <div class="card">
-                        <h3>Legacy System Modernization</h3>
-                        <p>Upgrade and transform your existing systems for improved performance</p>
+                        <h3>Legacy System Migrations</h3>
+                        <p>Upgrade and transform your existing systems for improved performance, and improved efficiency</p>
                     </div>
                     <div class="card">
-                        <h3>AI & Machine Learning Integration</h3>
-                        <p>Leverage cutting-edge AI technologies to gain competitive advantages</p>
+                        <h3>AI</h3>
+                        <p>We work with your data to create intelligent Automation that saves you time and money</p>
                     </div>
                 </div>
             </div>
@@ -167,27 +202,22 @@
 
         <section id="projects" class="projects">
             <div class="container">
-                <h2>Our Success Stories</h2>
+                <h2>A sample of the projects we build and Maintain</h2>
                 <div class="grid">
                     <div class="card">
                         <h3>Diaspora Directory</h3>
-                        <p>Connecting 1.5K+ global users</p>
+                        <p>Connecting Kenyans Abroad to companies back home</p>
                         <a href="https://thediasporadirectory.com/" target="_blank" rel="noopener noreferrer" class="cta-button">View Project</a>
                     </div>
                     <div class="card">
                         <h3>Wander Lust AI</h3>
-                        <p>Empowering 1M+ travelers</p>
+                        <p>Empowering 1M+ travelers using Artificial Intelligence</p>
                         <a href="https://www.wanderwiseai.com/" target="_blank" rel="noopener noreferrer" class="cta-button">View Project</a>
                     </div>
                     <div class="card">
-                        <h3>gTahidi AI</h3>
-                        <p>Revolutionizing education for 500+ users</p>
+                        <h3>Herbie AI</h3>
+                        <p>Making Pentesting Easier and Smarter using AI</p>
                         <a href="https://gtahidi.ai" target="_blank" rel="noopener noreferrer" class="cta-button">View Project</a>
-                    </div>
-                    <div class="card">
-                        <h3>Enterprise Solutions</h3>
-                        <p>300+ features implemented</p>
-                        <a href="#contact" class="cta-button">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -196,14 +226,41 @@
         <section id="contact" class="contact">
             <div class="container">
                 <h2>Let's Discuss Your Project</h2>
-                <a href="YOUR_FORM_LINK_HERE" class="cta-button">Contact Us</a>
+                <a href="YOUR_FORM_LINK_HERE" class="cta-button">Talk to Us</a>
+            </div>
+        </section>
+
+        <section class="founders">
+            <div class="container">
+                <h2>Meet Our Founders</h2>
+                <div class="founder-grid">
+                    <div class="founder-card">
+                        <img src="/api/placeholder/150/150" alt="Founder 1" class="founder-image">
+                        <h3>Founder Name 1</h3>
+                        <p>Co-founder & CEO</p>
+                    </div>
+                    <div class="founder-card">
+                        <img src="/api/api/team_members/wrdicmydeh8tbmq/Profile.jpg" alt="Founder 2" class="founder-image">
+                        <h3>Founder Name 2</h3>
+                        <p>Co-founder & CTO</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Ujaotech. All rights reserved.</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <p>&copy; 2024 Ujaotech. All rights reserved.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Blog</h3>
+                    <a href="#">Read our latest articles</a>
+                </div>
+            </div>
+            <p>Made with ❤️ in Kenya</p>
         </div>
     </footer>
 </body>
