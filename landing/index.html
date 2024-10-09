@@ -5,262 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ujaotech - Transform Your Business with Custom Software</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #FFA07A; /* Light Salmon */
-            --text-color: #333;
-            --background-color: #FFF;
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ff8a5d',
+                    },
+                },
+            },
         }
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--background-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        header {
-            background-color: var(--background-color);
-            padding: 20px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 18px;
-            margin-left: 30px;
-        }
-        .logo-placeholder {
-            width: 150px;
-            height: 50px;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            color: #999;
-        }
-        .hero {
-            text-align: center;
-            padding: 80px 0;
-        }
-        h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--text-color);
-        }
-        h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            font-size: 18px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            border-radius: 4px;
-        }
-        .cta-button:hover {
-            background-color: #FF8C61;
-        }
-        .services, .projects {
-            padding: 80px 0;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-        .card {
-            background-color: var(--background-color);
-            padding: 30px;
-            transition: transform 0.3s;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .services .card {
-            border: 2px solid #000;
-        }
-        .projects .card {
-            border: 2px solid var(--primary-color);
-        }
-        .card:hover {
-            transform: translateY(-10px);
-        }
-        .card h3 {
-            color: var(--primary-color);
-            margin-top: 0;
-        }
-        .contact {
-            text-align: center;
-            padding: 80px 0;
-            background-color: #f9f9f9;
-        }
-        .founders {
-            text-align: center;
-            padding: 80px 0;
-            background-color: #f0f0f0;
-        }
-        .founder-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            justify-items: center;
-        }
-        .founder-card {
-            text-align: center;
-        }
-        .founder-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            text-align: center;
-            padding: 40px 0;
-            margin-top: 40px;
-            border-top: 1px solid #eee;
-        }
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .footer-section {
-            margin: 10px 0;
-        }
-    </style>
+    </script>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo-placeholder">Your Logo</div>
-                <div>
-                    <a href="#services">Services</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact" class="cta-button">Let's Talk</a>
+<body class="font-sans text-gray-800 bg-white">
+    <header class="border-b">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-primary">Ujaotech</div>
+                <div class="space-x-6">
+                    <a href="#services" class="text-gray-800 hover:text-primary transition-colors">Services</a>
+                    <a href="#projects" class="text-gray-800 hover:text-primary transition-colors">Projects</a>
+                    <a href="#contact" class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition-colors">Let's Talk</a>
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Transform Your Business with Custom Software</h1>
-                <p>We build powerful, tailored solutions that drive growth and efficiency for enterprises</p>
-                <a href="#contact" class="cta-button">Discuss Your Project</a>
+        <section class="py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Transform Your Business with Custom Software</h1>
+                <p class="text-xl mb-8">We build powerful, tailored solutions that drive growth and efficiency for enterprises</p>
+                <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg text-lg hover:bg-opacity-90 transition-colors">Discuss Your Project</a>
             </div>
         </section>
 
-        <section id="services" class="services">
-            <div class="container">
-                <h2>Our Services</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Custom Software Development</h3>
-                        <p>We build Software that works for you, and your business needs</p>
+        <hr class="border-t border-gray-200 my-12 mx-auto max-w-4xl">
+
+        <section id="services" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Custom Software Development</h3>
+                        <p class="text-gray-800">We build Software that works for you, and your business needs</p>
                     </div>
-                    <div class="card">
-                        <h3> Business Process Automation </h3>
-                        <p> We focus on improving business process efficiency using software </p>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Business Process Automation</h3>
+                        <p class="text-gray-800">We focus on improving business process efficiency using software</p>
                     </div>
-                    <div class="card">
-                        <h3>Legacy System Migrations</h3>
-                        <p>Upgrade and transform your existing systems for improved performance, and improved efficiency</p>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Legacy System Migrations</h3>
+                        <p class="text-gray-800">Upgrade and transform your existing systems for improved performance</p>
                     </div>
-                    <div class="card">
-                        <h3>AI</h3>
-                        <p>We work with your data to create intelligent Automation that saves you time and money</p>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">AI</h3>
+                        <p class="text-gray-800">We work with your data to create intelligent Automation that saves you time and money</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>A sample of the projects we build and Maintain</h2>
-                <div class="grid">
-                    <div class="card">
-                        <h3>Diaspora Directory</h3>
-                        <p>Connecting Kenyans Abroad to companies back home</p>
-                        <a href="https://thediasporadirectory.com/" target="_blank" rel="noopener noreferrer" class="cta-button">View Project</a>
+        <hr class="border-t border-gray-200 my-12 mx-auto max-w-4xl">
+
+        <section id="projects" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Projects We Build and Maintain</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Diaspora Directory</h3>
+                        <p class="text-gray-800 mb-4">Connecting Kenyans Abroad to companies back home</p>
+                        <a href="https://thediasporadirectory.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">View Project →</a>
                     </div>
-                    <div class="card">
-                        <h3>Wander Lust AI</h3>
-                        <p>Empowering 1M+ travelers using Artificial Intelligence</p>
-                        <a href="https://www.wanderwiseai.com/" target="_blank" rel="noopener noreferrer" class="cta-button">View Project</a>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Wander Lust AI</h3>
+                        <p class="text-gray-800 mb-4">Empowering 1M+ travelers using Artificial Intelligence</p>
+                        <a href="https://www.wanderwiseai.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">View Project →</a>
                     </div>
-                    <div class="card">
-                        <h3>Herbie AI</h3>
-                        <p>Making Pentesting Easier and Smarter using AI</p>
-                        <a href="https://gtahidi.ai" target="_blank" rel="noopener noreferrer" class="cta-button">View Project</a>
+                    <div class="bg-white p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-semibold mb-3 text-primary">Herbie AI</h3>
+                        <p class="text-gray-800 mb-4">Making Pentesting Easier and Smarter using AI</p>
+                        <a href="https://gtahidi.ai" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">View Project →</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Let's Discuss Your Project</h2>
-                <a href="YOUR_FORM_LINK_HERE" class="cta-button">Talk to Us</a>
+        <hr class="border-t border-gray-200 my-12 mx-auto max-w-4xl">
+
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-8">Let's Discuss Your Project</h2>
+                <a href="#" class="bg-primary text-white px-6 py-3 rounded-lg text-lg hover:bg-opacity-90 transition-colors">Talk to Us</a>
             </div>
         </section>
 
-        <section class="founders">
-            <div class="container">
-                <h2>Meet Our Founders</h2>
-                <div class="founder-grid">
-                    <div class="founder-card">
-                        <img src="/api/placeholder/150/150" alt="Founder 1" class="founder-image">
-                        <h3>Founder Name 1</h3>
-                        <p>Co-founder & CEO</p>
+        <hr class="border-t border-gray-200 my-12 mx-auto max-w-4xl">
+
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12">Meet Our Founders</h2>
+                <div class="flex justify-center space-x-12">
+                    <div class="text-center">
+                        <img src="/api/placeholder/150/150" alt="Founder 1" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold">Founder Name 1</h3>
+                        <p class="text-gray-800">Co-founder & CEO</p>
                     </div>
-                    <div class="founder-card">
-                        <img src="/api/api/team_members/wrdicmydeh8tbmq/Profile.jpg" alt="Founder 2" class="founder-image">
-                        <h3>Founder Name 2</h3>
-                        <p>Co-founder & CTO</p>
+                    <div class="text-center">
+                        <img src="/api/placeholder/150/150" alt="Founder 2" class="w-32 h-32 rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-semibold">Founder Name 2</h3>
+                        <p class="text-gray-800">Co-founder & CTO</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-4">Ujaotech</h3>
                     <p>&copy; 2024 Ujaotech. All rights reserved.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Blog</h3>
-                    <a href="#">Read our latest articles</a>
+                <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="hover:text-primary">Services</a></li>
+                        <li><a href="#projects" class="hover:text-primary">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/3">
+                    <h3 class="text-lg font-semibold mb-4">Blog</h3>
+                    <a href="#" class="hover:text-primary">Read our latest articles</a>
                 </div>
             </div>
-            <p>Made with ❤️ in Kenya</p>
+            <div class="mt-8 text-center">
+                <p>Made with ❤️ in Kenya</p>
+            </div>
         </div>
     </footer>
 </body>
