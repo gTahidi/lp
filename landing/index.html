@@ -99,6 +99,24 @@
                 <h2 class="text-3xl font-bold mb-8">Let's Discuss Your Project</h2>
                 <a href="https://cal.com/daniel-omusula" class="bg-primary text-white px-6 py-3 rounded-lg text-lg hover:bg-opacity-90 transition-colors">Talk to Us</a>
             </div>
+            
+    <script>
+        (function(d,t) {
+          var BASE_URL="https://awi.ujaotech.com";
+          var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+          g.src=BASE_URL+"/packs/js/sdk.js";
+          g.defer = true;
+          g.async = true;
+          s.parentNode.insertBefore(g,s);
+          g.onload=function(){
+            window.chatwootSDK.run({
+              websiteToken: 'o7Ker5riTTvHYAYVmsRQ5ume',
+              baseUrl: BASE_URL
+            })
+          }
+        })(document,"script");
+      </script>
+      
         </section>
 
         <hr class="border-t border-gray-200 my-12 mx-auto max-w-4xl">
