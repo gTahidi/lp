@@ -1,0 +1,24 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+import Navbar from '../components/Navbar.svelte';
+import Hero from '../components/Hero.svelte';
+import Services from '../components/Services.svelte';
+import Projects from '../components/Projects.svelte';
+import Philosophy from '../components/Philosophy.svelte';
+import TechStack from '../components/TechStack.svelte';
+import CTA from '../components/CTA.svelte';
+import Footer from '../components/Footer.svelte';
+---
+
+<Layout>
+  <Navbar client:load />
+  <Hero client:load />
+  <Services client:load />
+  <Projects client:load />
+  <Philosophy client:load />
+  <TechStack client:load />
+  <CTA client:load />
+  <Footer client:load />
+</Layout>
