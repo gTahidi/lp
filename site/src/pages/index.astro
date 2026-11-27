@@ -2,197 +2,23 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 
-const booking = 'https://cal.com/daniel-omusula';
-const nav = [
-  { label: 'Work', href: '#projects' },
-  { label: 'Services', href: '#services' },
-  { label: 'Contact', href: '#contact' },
-];
-
-const projects = [
-  {
-    theme: 'directory',
-    type: 'Live site / Service directory',
-    name: 'Diaspora Directory',
-    art: ['Diaspora', 'Directory'],
-    description: 'Kenyans abroad can find verified builders, plumbers, and home care providers in Kenya.',
-    href: 'https://thediasporadirectory.com/',
-    action: 'Explore Diaspora Directory',
-  },
-  {
-    theme: 'bastco',
-    type: 'Live site / Cybersecurity',
-    name: 'Bastco',
-    art: ['Bastco'],
-    description: 'Bastco helps teams assess security, secure their infrastructure, and build software.',
-    href: 'https://bastco.org/',
-    action: 'Visit Bastco',
-  },
-];
-
-const publicWork = [
-  {
-    group: 'Product / Bastco',
-    name: 'Kifaru',
-    description: 'A local security assessment tool. Teams can review findings and supporting evidence in one place.',
-    href: 'https://bastco.org/kifaru/',
-    action: 'Explore Kifaru',
-    source: 'https://github.com/Bastsec/homebrew-tap',
-    sourceLabel: 'Homebrew on GitHub',
-  },
-  {
-    group: 'Public code / Linked by Bastco',
-    name: 'CVE-Lens',
-    description: 'Search and filter public vulnerability records from the National Vulnerability Database.',
-    href: 'https://github.com/addcontent/CVE-Lens',
-    action: 'View CVE-Lens on GitHub',
-  },
-  {
-    group: 'Public code / gTahidi',
-    name: 'CoreSynq',
-    description: 'A landing page for an ESG platform. It explains reporting frameworks and includes an interactive demo.',
-    href: 'https://github.com/gTahidi/CoreSynq',
-    action: 'View CoreSynq on GitHub',
-  },
-  {
-    group: 'Public code / gTahidi',
-    name: 'Retail sales forecasting',
-    description: 'A Microsoft Fabric project that uses past sales to explore how retailers can forecast demand and plan inventory.',
-    href: 'https://github.com/gTahidi/fabric-hacktogether',
-    action: 'View the Fabric project on GitHub',
-  },
-];
-
-const services = [
-  { name: 'Custom software', description: 'Build a website, web app, mobile app, or ERP system around the way your team works.' },
-  { name: 'KRA eTIMS integration', id: 'etims', description: 'Connect your billing system to eTIMS. We help check invoice data and tax totals before you send invoices to KRA.' },
-  { name: 'Workflow automation', description: 'Move paperwork and approvals online. We can also build AI tools that work with your data.' },
-  { name: 'Cloud migration', description: 'Move applications to Azure and review how they run once they are there.' },
-  { name: 'Cybersecurity consulting', description: 'Find gaps in your systems, decide what to fix first, and put safeguards in place.' },
-  { name: 'Digital marketing', description: 'Plan what to publish, help people find your site in search, and manage your social channels.' },
-];
+import Navbar from '../components/Navbar.svelte';
+import Hero from '../components/Hero.svelte';
+import Services from '../components/Services.svelte';
+import Projects from '../components/Projects.svelte';
+import Philosophy from '../components/Philosophy.svelte';
+import TechStack from '../components/TechStack.svelte';
+import CTA from '../components/CTA.svelte';
+import Footer from '../components/Footer.svelte';
 ---
 
-<Layout
-  title="Ujao Tech | Software and automation in Kenya"
-  description="Ujao Tech is a software studio in Kiambu, Kenya. We build custom software, automate workflows, and connect billing systems to KRA eTIMS."
->
-  <header class="site-header" id="top">
-    <div class="wrap header-inner">
-      <a class="wordmark" href="/" aria-label="Ujao Tech home"><span class="mark" aria-hidden="true"></span>Ujao Tech</a>
-      <nav class="site-nav" aria-label="Main navigation">
-        {nav.map(({ label, href }) => <a href={href}>{label}</a>)}
-      </nav>
-      <a class="button button-small" href={booking}>Book a call <span aria-hidden="true">↗</span></a>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="wrap hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="signal" aria-hidden="true"></span> Software studio in Kiambu, Kenya</p>
-        <h1 id="hero-title"><span>Custom software.</span> <span>Less manual work.</span></h1>
-        <p class="hero-description">We build web and mobile apps, automate approvals, and connect billing systems to <a href="#etims">KRA eTIMS</a>.</p>
-        <div class="actions">
-          <a class="button button-primary" href="#projects">See our work <span aria-hidden="true">↓</span></a>
-          <a class="text-link" href="#services">Explore services <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-      <div class="hero-art" aria-hidden="true">
-        <span class="art-caption">Schematic / 01</span>
-        <svg viewBox="0 0 520 430" fill="none" focusable="false">
-          <defs>
-            <pattern id="grid" width="27" height="27" patternUnits="userSpaceOnUse"><path d="M27 0H0V27" stroke="#fff" stroke-opacity=".13"/></pattern>
-            <linearGradient id="ring" x1="224" y1="90" x2="390" y2="354" gradientUnits="userSpaceOnUse"><stop stop-color="#ffc19b"/><stop offset=".57" stop-color="#f76e37"/><stop offset="1" stop-color="#a83c22"/></linearGradient>
-            <linearGradient id="light" x1="109" y1="89" x2="318" y2="343" gradientUnits="userSpaceOnUse"><stop stop-color="#fff8ee"/><stop offset="1" stop-color="#7c7268"/></linearGradient>
-          </defs>
-          <rect x="41" y="40" width="438" height="350" fill="url(#grid)" stroke="#fff" stroke-opacity=".17" />
-          <path d="M41 215H479M260 40V390M96 324V371H150M424 110V59H370" stroke="#fff" stroke-opacity=".32" stroke-dasharray="5 6"/>
-          <circle cx="207" cy="215" r="106" stroke="url(#light)" stroke-width="43"/>
-          <circle cx="313" cy="215" r="106" stroke="url(#ring)" stroke-width="43"/>
-          <circle cx="207" cy="215" r="137" stroke="#fff" stroke-opacity=".29" stroke-dasharray="2 8"/>
-          <circle cx="313" cy="215" r="137" stroke="#ffc19b" stroke-opacity=".65" stroke-dasharray="2 8"/>
-          <path d="M41 40h19m-19 0v19m438-19h-19m19 0v19M41 390h19m-19 0v-19m438 19h-19m19 0v-19" stroke="#f8ae86" stroke-width="2" />
-          <circle cx="96" cy="325" r="4" fill="#e9d6c3"/><circle cx="424" cy="106" r="4" fill="#fa8759"/>
-        </svg>
-        <span class="art-footer"><span>Ujao Tech</span><span>Kiambu, Kenya</span></span>
-      </div>
-    </section>
-
-    <section class="wrap section" id="projects" aria-labelledby="work-title">
-      <div class="section-heading">
-        <div><p class="eyebrow">01 / Portfolio</p><h2 id="work-title">Selected work</h2></div>
-        <p>Explore the live sites, then browse tools and code from Bastco and gTahidi.</p>
-      </div>
-      <div class="projects">
-        {projects.map((project) => (
-          <article class="project">
-            <a class="project-link" href={project.href} aria-labelledby={`${project.theme}-action`} aria-describedby={`${project.theme}-type ${project.theme}-summary`}>
-              <div class={`project-art ${project.theme}`}>
-                <span class="project-art-type" id={`${project.theme}-type`}>{project.type}</span>
-                <span class="project-art-name" aria-hidden="true">{project.art.map((line) => <span>{line}</span>)}</span>
-                <span class="art-arrow" aria-hidden="true">↗</span>
-              </div>
-              <div class="project-content">
-                <h3>{project.name}</h3>
-                <p id={`${project.theme}-summary`}>{project.description}</p>
-                <span class="project-action" id={`${project.theme}-action`}>{project.action}</span>
-              </div>
-            </a>
-          </article>
-        ))}
-      </div>
-      <div class="more-work">
-        <h3>Products and public code</h3>
-        <div class="work-grid">
-          {publicWork.map((item) => (
-            <article class="work-item">
-              <p class="eyebrow">{item.group}</p>
-              <h4>{item.name}</h4>
-              <p>{item.description}</p>
-              <div class="project-links">
-                <a class="text-link" href={item.href}>{item.action} <span aria-hidden="true">↗</span></a>
-                {item.source && <a class="text-link secondary-link" href={item.source}>{item.sourceLabel} <span aria-hidden="true">↗</span></a>}
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="wrap section" id="services" aria-labelledby="services-title">
-      <div class="section-heading">
-        <div><p class="eyebrow">02 / Capabilities</p><h2 id="services-title">What we do</h2></div>
-        <p>Start a new project, improve an existing system, or automate a task your team does by hand.</p>
-      </div>
-      <div class="services">
-        {services.map((service, index) => (
-          <article class="service" id={service.id}>
-            <span class="service-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-            <div><h3>{service.name}</h3><p>{service.description}</p></div>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="wrap section" id="contact" aria-labelledby="contact-title">
-      <div class="contact-panel">
-        <div>
-          <p class="eyebrow">03 / Contact</p>
-          <h2 id="contact-title">Talk through your project.</h2>
-          <p>Tell us what you want to build or what is slowing your team down. We can help you choose a first step.</p>
-        </div>
-        <a class="button button-primary" href={booking}>Book a call <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="wrap site-footer">
-    <a class="wordmark" href="/" aria-label="Ujao Tech home"><span class="mark" aria-hidden="true"></span>Ujao Tech</a>
-    <p>Kiambu, Kenya · Since 2024</p>
-    <nav aria-label="Footer navigation">
-      {nav.map(({ label, href }) => <a href={href}>{label}</a>)}
-      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
-    </nav>
-  </footer>
+<Layout>
+  <Navbar client:load />
+  <Hero client:load />
+  <Services client:load />
+  <Projects client:load />
+  <Philosophy client:load />
+  <TechStack client:load />
+  <CTA client:load />
+  <Footer client:load />
 </Layout>
